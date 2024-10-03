@@ -415,9 +415,9 @@ sql += ` ORDER BY notice.id DESC`
 //           // else if (column === 'file_path') {
 //           //   // Encode the image URL
 //           //   const encodedURL = encodeURIComponent(result[column]);
-//           //   console.log(`${process.env.NEXT_PUBLIC_API_URL}:5003/${result[column]}`, 'encodedURL welcome');
+//           //   console.log(`${process.env.NEXT_PUBLIC_API_URL}/:5003/${result[column]}`, 'encodedURL welcome');
 //           //   // const encodedURL = encode(result[column]);
-//           //   row += `<td><img src="${process.env.NEXT_PUBLIC_API_URL}:5003/${result[column]}" alt="image" style="max-width: 100px; max-height: 100px;"></td>`;
+//           //   row += `<td><img src="${process.env.NEXT_PUBLIC_API_URL}/:5003/${result[column]}" alt="image" style="max-width: 100px; max-height: 100px;"></td>`;
 //           // }
 //           else if (column === 'file') {
 //             if (result[column]) {
@@ -442,7 +442,7 @@ sql += ` ORDER BY notice.id DESC`
 //       });
 //       // <link href='http://sonnetdp.github.io/nikosh/css/nikosh.css' rel='stylesheet' type='text/css'>
 //       // <link href='./nikosh.css' rel='stylesheet' type='text/css'>
-//       //  ${process.env.NEXT_PUBLIC_API_URL}:5002/get-css/nikosh.css
+//       //  ${process.env.NEXT_PUBLIC_API_URL}/get-css/nikosh.css
 //       // @import url("nikosh.css");
 
 //       const html = `<html lang="en">
@@ -667,9 +667,9 @@ notice_list_pdf: async (req, res) => {
         // else if (column === 'file_path') {
         //   // Encode the image URL
         //   const encodedURL = encodeURIComponent(result[column]);
-        //   console.log(`${process.env.NEXT_PUBLIC_API_URL}:5003/${result[column]}`, 'encodedURL welcome');
+        //   console.log(`${process.env.NEXT_PUBLIC_API_URL}/:5003/${result[column]}`, 'encodedURL welcome');
         //   // const encodedURL = encode(result[column]);
-        //   row += `<td><img src="${process.env.NEXT_PUBLIC_API_URL}:5003/${result[column]}" alt="image" style="max-width: 100px; max-height: 100px;"></td>`;
+        //   row += `<td><img src="${process.env.NEXT_PUBLIC_API_URL}/:5003/${result[column]}" alt="image" style="max-width: 100px; max-height: 100px;"></td>`;
         // }
         else if (column === 'file') {
           if (result[column]) {
@@ -694,7 +694,7 @@ notice_list_pdf: async (req, res) => {
     });
     // <link href='http://sonnetdp.github.io/nikosh/css/nikosh.css' rel='stylesheet' type='text/css'>
     // <link href='./nikosh.css' rel='stylesheet' type='text/css'>
-    //  ${process.env.NEXT_PUBLIC_API_URL}:5002/get-css/nikosh.css
+    //  ${process.env.NEXT_PUBLIC_API_URL}/get-css/nikosh.css
     // @import url("nikosh.css");
 
     const html = `<html lang="en">

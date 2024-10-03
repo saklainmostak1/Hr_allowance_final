@@ -62,7 +62,7 @@
 //     }
 //     console.log(updateValue);
 
-//     fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/smsSettings`, {
+//     fetch(`${process.env.NEXT_PUBLIC_API_URL}/smsSettings`, {
 //       method: 'POST',
 //       headers: {
 //         'content-type': 'application/json'
@@ -85,7 +85,7 @@
 //   }, []);
 
 //   const getSmsSettings = async () => {
-//     const url = `${process.env.NEXT_PUBLIC_API_URL}:5002/smsSettings`;
+//     const url = `${process.env.NEXT_PUBLIC_API_URL}/smsSettings`;
 //     const response = await fetch(url);
 //     const data = await response.json();
 //     setSmsSettings(data);
@@ -348,7 +348,7 @@ const AdmissionSMS = () => {
   } = useQuery({
     queryKey: ['schoolShiftList'],
     queryFn: async () => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_all`)
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_all`)
 
       const data = await res.json()
       return data
@@ -400,7 +400,7 @@ const AdmissionSMS = () => {
   }, []);
 
   const getSmsSettings = async () => {
-    const url = `${process.env.NEXT_PUBLIC_API_URL}:5002/smsSettings`;
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/smsSettings`;
     const response = await fetch(url);
     const data = await response.json();
     setSmsSettings(data);
@@ -453,7 +453,7 @@ const AdmissionSMS = () => {
 
     console.log(updateValue);
 
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/smsSettings`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/smsSettings`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
@@ -763,7 +763,7 @@ export default AdmissionSMS;
 
 //     const fetchData = async () => {
 //         try {
-//             const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/api/all_table_data`, { table_name: tableName });
+//             const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/all_table_data`, { table_name: tableName });
 //             setTableData(response.data);
 //             setError(null);
 //         } catch (error) {

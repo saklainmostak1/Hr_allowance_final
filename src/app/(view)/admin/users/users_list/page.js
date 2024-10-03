@@ -36,7 +36,7 @@ const UsersList = () => {
     } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/user/allUser`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/allUser`)
 
             const data = await res.json()
             return data
@@ -45,7 +45,7 @@ const UsersList = () => {
 
     const [btnIconUsers, setBtnIconUsers] = useState([])
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/users`)
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/users`)
             .then(Response => Response.json())
             .then(data => setBtnIconUsers(data))
 
@@ -90,7 +90,7 @@ const UsersList = () => {
         console.log(id)
         const proceed = window.confirm('Are You Sure delete')
         if (proceed) {
-            fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/allUser/${id}`, {
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/allUser/${id}`, {
                 method: "DELETE",
 
             })

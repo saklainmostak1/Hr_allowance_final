@@ -35,7 +35,7 @@ const AccountHeadCreate = () => {
     } = useQuery({
         queryKey: ['accountHeadTypes'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/account_head_type/account_head_type_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/account_head_type/account_head_type_all`)
 
             const data = await res.json()
             return data
@@ -47,7 +47,7 @@ const AccountHeadCreate = () => {
     } = useQuery({
         queryKey: ['brands'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/account_head/account_head_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/account_head/account_head_all`)
 
             const data = await res.json()
             return data
@@ -271,7 +271,7 @@ const AccountHeadCreate = () => {
             return fields[index];
         });
 
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/account_head/account_head_create`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/account_head/account_head_create`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

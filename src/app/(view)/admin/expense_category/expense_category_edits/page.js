@@ -13,7 +13,7 @@ const ExpenceCategoryUpdate = ({ id }) => {
     } = useQuery({
         queryKey: ['expenseCategorySingle'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expence_category/expence_category_all/${id}`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expence_category/expence_category_all/${id}`)
 
             const data = await res.json()
             return data
@@ -25,7 +25,7 @@ const ExpenceCategoryUpdate = ({ id }) => {
     const { data: brands = [], } = useQuery({
         queryKey: ['brands'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expence_category/expence_category_all`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expence_category/expence_category_all`);
             const data = await res.json();
             // Filter out the brand with id 
             const filteredBrands = data.filter(brand => brand.id !== parseInt(id));
@@ -116,7 +116,7 @@ const ExpenceCategoryUpdate = ({ id }) => {
 
 
 
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expence_category/expence_category_edit/${id}`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expence_category/expence_category_edit/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

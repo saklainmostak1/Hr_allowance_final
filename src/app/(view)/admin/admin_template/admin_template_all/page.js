@@ -34,7 +34,7 @@ const AdminTemplateAll = () => {
     } = useQuery({
         queryKey: ['adminPanelSettings'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/admin/admin_panel_settings`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/admin/admin_panel_settings`)
 
             const data = await res.json()
 
@@ -46,7 +46,7 @@ const AdminTemplateAll = () => {
 
     const [adminPanelSettingsBtn, setAdminPanelSettingsBtn] = useState([])
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/admin/allAdmin`)
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/admin/allAdmin`)
             .then(Response => Response.json())
             .then(data => setAdminPanelSettingsBtn(data))
     }, [])
@@ -89,7 +89,7 @@ const AdminTemplateAll = () => {
 
         const proceed = window.confirm('Are You Sure delete');
         if (proceed) {
-            fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/admin/admin_panel_settings/delete/${id}`, {
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/admin/admin_panel_settings/delete/${id}`, {
                 method: 'DELETE',
             })
                 .then((Response) => Response.json())

@@ -15,7 +15,7 @@
 //     } = useQuery({
 //         queryKey: ['usersRoleCreate'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/page-group/display-name/with-id`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/page-group/display-name/with-id`)
 
 //             const data = await res.json()
 //             return data
@@ -321,7 +321,7 @@
 //     } = useQuery({
 //         queryKey: ['usersRoleCreate'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/page-group/display-name/with-id`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/page-group/display-name/with-id`)
 
 //             const data = await res.json()
 //             return data

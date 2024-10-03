@@ -29,7 +29,7 @@ const EditCompany = ({id}) => {
     const { data: companySingle, isLoading, refetch } = useQuery({
         queryKey: ['companySingle', id],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/company/company_all/${id}`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/company/company_all/${id}`);
             const data = await res.json();
             return data;
         }
@@ -84,7 +84,7 @@ const EditCompany = ({id}) => {
         }
 
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/company/company_edit/${id}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/company/company_edit/${id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

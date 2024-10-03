@@ -26,7 +26,7 @@
 //     } = useQuery({
 //         queryKey: ['schoolShiftListSingle'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_all/${id}`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_all/${id}`)
 
 //             const data = await res.json()
 //             return data
@@ -61,7 +61,7 @@
 //     const school_shift_update = (e) => {
 //         e.preventDefault()
 
-//         fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_edit/${id}`, {
+//         fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_edit/${id}`, {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json'
@@ -244,7 +244,7 @@
 //     const { data: companys = [] } = useQuery({
 //         queryKey: ['companys'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/company/company_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/company/company_all`)
 //             const data = await res.json();
 //             return data;
 //         }
@@ -253,7 +253,7 @@
 //     const { data: branchs = [] } = useQuery({
 //         queryKey: ['branchs'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/branch/branch_all`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/branch/branch_all`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -288,7 +288,7 @@
 //     const { data: schoolShiftData, isLoading, refetch } = useQuery({
 //         queryKey: ['schoolShiftListSingle', id],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_all/${id}`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_all/${id}`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -321,7 +321,7 @@
 //     const handleSubmit = async (e) => {
 //         e.preventDefault();
 //         try {
-//             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_edit/${id}`, {
+//             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_edit/${id}`, {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json'
@@ -548,7 +548,7 @@
 //     const { data: companys = [] } = useQuery({
 //         queryKey: ['companys'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/company/company_all`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/company/company_all`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -557,7 +557,7 @@
 //     const { data: branchs = [] } = useQuery({
 //         queryKey: ['branchs'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/branch/branch_all`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/branch/branch_all`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -591,7 +591,7 @@
 //     const { data: schoolShiftData, isLoading, refetch } = useQuery({
 //         queryKey: ['schoolShiftListSingle', id],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_all/${id}`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_all/${id}`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -628,7 +628,7 @@
 //     const handleSubmit = async (e) => {
 //         e.preventDefault();
 //         try {
-//             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_edit/${id}`, {
+//             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_edit/${id}`, {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json'
@@ -845,7 +845,7 @@
 // 	const { data: companys = [], isLoading, refetch } = useQuery({
 // 		queryKey: ['companys'],
 // 		queryFn: async () => {
-// 			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/company/company_all`)
+// 			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/company/company_all`)
 // 			const data = await res.json();
 // 			return data;
 // 		}
@@ -854,7 +854,7 @@
 // 	const { data: branchs = [] } = useQuery({
 // 		queryKey: ['branchs'],
 // 		queryFn: async () => {
-// 			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/branch/branch_all`);
+// 			const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/branch/branch_all`);
 // 			const data = await res.json();
 // 			return data;
 // 		}
@@ -886,7 +886,7 @@
 //     const { data: schoolShiftData } = useQuery({
 //         queryKey: ['schoolShiftListSingle', id],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_all/${id}`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_all/${id}`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -944,7 +944,7 @@
 //     const handleSubmit = async (e) => {
 //         e.preventDefault();
 //         try {
-//             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_edit/${id}`, {
+//             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_edit/${id}`, {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json'
@@ -1172,7 +1172,7 @@
 //     const { data: companys = [], isLoading, refetch } = useQuery({
 //         queryKey: ['companys'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/company/company_all`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/company/company_all`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -1181,7 +1181,7 @@
 //     const { data: branchs = [] } = useQuery({
 //         queryKey: ['branchs'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/branch/branch_all`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/branch/branch_all`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -1208,7 +1208,7 @@
 //     const { data: schoolShiftData } = useQuery({
 //         queryKey: ['schoolShiftListSingle', id],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_all/${id}`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_all/${id}`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -1269,7 +1269,7 @@
 //     const handleSubmit = async (e) => {
 //         e.preventDefault();
 //         try {
-//             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_edit/${id}`, {
+//             const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_edit/${id}`, {
 //                 method: 'POST',
 //                 headers: {
 //                     'Content-Type': 'application/json'
@@ -1491,7 +1491,7 @@ const SchoolShiftEdit = ({ id }) => {
     const { data: companys = [], isLoading } = useQuery({
         queryKey: ['companys'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/company/company_all`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/company/company_all`);
             const data = await res.json();
             return data;
         }
@@ -1500,7 +1500,7 @@ const SchoolShiftEdit = ({ id }) => {
     const { data: branchs = [] } = useQuery({
         queryKey: ['branchs'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/branch/branch_all`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/branch/branch_all`);
             const data = await res.json();
             return data;
         }
@@ -1527,7 +1527,7 @@ const SchoolShiftEdit = ({ id }) => {
     const { data: schoolShiftData } = useQuery({
         queryKey: ['schoolShiftListSingle', id],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_all/${id}`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_all/${id}`);
             const data = await res.json();
             return data;
         }
@@ -1626,7 +1626,7 @@ const SchoolShiftEdit = ({ id }) => {
         }
 
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_edit/${id}`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_edit/${id}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -21,7 +21,7 @@ const AttendanceLogs = () => {
     const { data: branchAll = [], isLoading, refetch } = useQuery({
         queryKey: ['branchAll'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/branch/branch_all`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/branch/branch_all`);
             const data = await res.json();
             return data;
         }
@@ -30,7 +30,7 @@ const AttendanceLogs = () => {
     const { data: designations = [] } = useQuery({
         queryKey: ['designations'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/designation/designation_all`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/designation/designation_all`);
             const data = await res.json();
             return data;
         }
@@ -39,7 +39,7 @@ const AttendanceLogs = () => {
     const { data: employees = [] } = useQuery({
         queryKey: ['employees'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/employee/employee_all_list`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/employee/employee_all_list`);
             const data = await res.json();
             return data;
         }
@@ -155,7 +155,7 @@ const AttendanceLogs = () => {
             setLoading(false);
             return
         }
-        axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance/attendance_log_search`, {
+        axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance/attendance_log_search`, {
             itemName, searchQuery, employee, deviceName, fromDate
         })
             .then(response => {
@@ -177,8 +177,8 @@ const AttendanceLogs = () => {
 
     const attendance_pdf_download = async () => {
 
-        // const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/office_visit/office_visit_remarks_list_visit/${id}`);
-        const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance/attendance_log_search`, {
+        // const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/Admin/office_visit/office_visit_remarks_list_visit/${id}`);
+        const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance/attendance_log_search`, {
             itemName, searchQuery, employee, deviceName, fromDate
         });
 
@@ -224,7 +224,7 @@ const AttendanceLogs = () => {
         console.log(searchResults)
 
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance/attendance_log_pdf`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance/attendance_log_pdf`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -261,8 +261,8 @@ const AttendanceLogs = () => {
 
     const attendance_print_download = async () => {
         try {
-            // const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/office_visit/office_visit_remarks_list_visit/${id}`);
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance/attendance_log_search`, {
+            // const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/Admin/office_visit/office_visit_remarks_list_visit/${id}`);
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance/attendance_log_search`, {
                 itemName, searchQuery, employee, deviceName, fromDate
             });
 
@@ -321,7 +321,7 @@ const AttendanceLogs = () => {
             const printWindow = window.open('', '_blank');
             printWindow.document.open();
 
-            const html = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance/attendance_log_prtint`, {
+            const html = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance/attendance_log_prtint`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -355,7 +355,7 @@ const AttendanceLogs = () => {
 
     const attendance_excel_download = async () => {
         try {
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance/attendance_log_search`, {
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance/attendance_log_search`, {
                 itemName, searchQuery, employee, deviceName, fromDate
             });
             const searchResults = response.data.results;
@@ -378,7 +378,7 @@ const AttendanceLogs = () => {
                     'SL No.': index + 1,
                     'Employee ID': category.unique_id,
                     'Name': category.full_name,
-                    'Photo': category.photo ? `=${process.env.NEXT_PUBLIC_API_URL}:5003/${category.photo}` : '',
+                    'Photo': category.photo ? `=${process.env.NEXT_PUBLIC_API_URL}/:5003/${category.photo}` : '',
                     'Designation': category.designation_name,
                     'Date': showFromDate ? `${showFromDate}` : '',
                     'Time': category.checktime,
@@ -414,7 +414,7 @@ const AttendanceLogs = () => {
 
     const attendance_word_download = async () => {
         try {
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance/attendance_list_search`, {
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance/attendance_list_search`, {
                 itemName, searchQuery, employee, deviceName, fromDate
             });
             const searchResults = response.data.results;
@@ -444,7 +444,7 @@ const AttendanceLogs = () => {
                 console.log('Category:', category);
 
                 // Fetch image data
-                const imageResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5003/${category.photo}`);
+                const imageResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:5003/${category.photo}`);
                 const imageData = await imageResponse.blob();
                 const imageRun = new ImageRun({
                     data: imageData,
@@ -567,7 +567,7 @@ const AttendanceLogs = () => {
     } = useQuery({
         queryKey: ['moduleInfo'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/admin/module_info/module_info_all/${userId}`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/admin/module_info/module_info_all/${userId}`)
 
             const data = await res.json()
             return data
@@ -590,7 +590,7 @@ const AttendanceLogs = () => {
         console.log(id)
         const proceed = window.confirm(`Are You Sure delete${id}`)
         if (proceed) {
-            fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance/attendance_delete/${id}`, {
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance/attendance_delete/${id}`, {
                 method: "POST",
 
             })
@@ -805,7 +805,7 @@ const AttendanceLogs = () => {
                                                                 <td>{attendances.unique_id}</td>
                                                                 <td>{attendances.full_name}</td>
                                                                 <td>
-                                                                    <img src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${attendances.photo}`} alt="No image found" className="img-fluid" />
+                                                                    <img src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${attendances.photo}`} alt="No image found" className="img-fluid" />
                                                                 </td>
                                                                 <td>{attendances.designation_name}</td>
 

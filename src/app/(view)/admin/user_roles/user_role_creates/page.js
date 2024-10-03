@@ -15,7 +15,7 @@ const UsersRoleCreates = () => {
     } = useQuery({
         queryKey: ['usersRoleCreate'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/page-group/display-name/with-id`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/page-group/display-name/with-id`)
 
             const data = await res.json()
             return data
@@ -37,7 +37,7 @@ const UsersRoleCreates = () => {
 
     const [btnIconUsers, setBtnIconUsers] = useState([])
     useEffect(() => {
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/user-role/btn`)
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/user-role/btn`)
             .then(Response => Response.json())
             .then(data => setBtnIconUsers(data))
 
@@ -592,9 +592,9 @@ const UsersRoleCreates = () => {
 
         console.log('Form Data:', formData);
         // https://hr-allowance-new-server.vercel.app/user/user-role-create
-        // ${process.env.NEXT_PUBLIC_API_URL}:5002/user/user-role-create
+        // ${process.env.NEXT_PUBLIC_API_URL}/user/user-role-create
 
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/user/user-role-create`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/user/user-role-create`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

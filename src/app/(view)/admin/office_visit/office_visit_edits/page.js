@@ -42,7 +42,7 @@ const OfficeVisitEdits = ({id}) => {
     } = useQuery({
         queryKey: ['office_visits_single'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/office_visit/office_visit_list_single/${id}`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/office_visit/office_visit_list_single/${id}`)
             const data = await res.json()
             return data
         }
@@ -219,7 +219,7 @@ const OfficeVisitEdits = ({id}) => {
 
 
 
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/office_visit/office_visit_edit/${id}`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/office_visit/office_visit_edit/${id}`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

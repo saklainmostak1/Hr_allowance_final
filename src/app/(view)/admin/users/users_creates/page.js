@@ -8,7 +8,7 @@
 //   const { data: usersRoles = [], isLoading, refetch } = useQuery({
 //     queryKey: ['usersRoles'],
 //     queryFn: async () => {
-//       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/users/role_all`);
+//       const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/role_all`);
 //       const data = await res.json();
 //       return data;
 //     }
@@ -81,7 +81,7 @@
 //       OTP: selectedRoleOTP
 //     };
 
-//     fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/create-users`, {
+//     fetch(`${process.env.NEXT_PUBLIC_API_URL}/create-users`, {
 //       method: 'POST',
 //       headers: {
 //         'content-type': 'application/json',
@@ -181,7 +181,7 @@ const UsersCreate = () => {
   const { data: usersRoles = [], isLoading, refetch } = useQuery({
     queryKey: ['usersRoles'],
     queryFn: async () => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/users/role_all`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/role_all`);
       const data = await res.json();
       return data;
     }
@@ -267,7 +267,7 @@ const UsersCreate = () => {
       pass_reset: pass_reset
     };
 
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/create-users`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/create-users`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',

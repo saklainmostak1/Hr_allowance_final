@@ -17,7 +17,7 @@ const CreateExpenceCategory = () => {
     } = useQuery({
         queryKey: ['brands'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expence_category/expence_category_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expence_category/expence_category_all`)
 
             const data = await res.json()
             return data
@@ -84,7 +84,7 @@ const CreateExpenceCategory = () => {
         };
 
  
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expence_category/expence_category_create`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expence_category/expence_category_create`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

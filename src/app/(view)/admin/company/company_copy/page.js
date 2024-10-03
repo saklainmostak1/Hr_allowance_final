@@ -31,7 +31,7 @@ const CopyCompany = ({id}) => {
     const { data: companySingle, isLoading, refetch } = useQuery({
         queryKey: ['companySingle', id],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/company/company_all/${id}`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/company/company_all/${id}`);
             const data = await res.json();
             return data;
         }
@@ -89,7 +89,7 @@ const CopyCompany = ({id}) => {
         }
     
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/company/company_create`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/company/company_create`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

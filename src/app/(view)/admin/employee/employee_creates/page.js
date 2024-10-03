@@ -19,7 +19,7 @@ const EmployeeCreate = () => {
         queryKey: ["apiData"],
         queryFn: async () => {
             const res = await fetch(
-                `${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/sms_api/sms_api_all`
+                `${process.env.NEXT_PUBLIC_API_URL}/Admin/sms_api/sms_api_all`
             );
 
             const data = await res.json();
@@ -161,7 +161,7 @@ const EmployeeCreate = () => {
     } = useQuery({
         queryKey: ['payRoll'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/pay_roll/pay_roll_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/pay_roll/pay_roll_all`)
 
             const data = await res.json()
             return data
@@ -172,7 +172,7 @@ const EmployeeCreate = () => {
     } = useQuery({
         queryKey: ['professions'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/profession/profession_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/profession/profession_all`)
 
             const data = await res.json()
             return data
@@ -183,7 +183,7 @@ const EmployeeCreate = () => {
     } = useQuery({
         queryKey: ['educationName'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/education/education_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/education/education_list`)
 
             const data = await res.json()
             return data
@@ -194,7 +194,7 @@ const EmployeeCreate = () => {
     } = useQuery({
         queryKey: ['divisions'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/divisions/divisions_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/divisions/divisions_list`)
 
             const data = await res.json()
             return data
@@ -205,7 +205,7 @@ const EmployeeCreate = () => {
     } = useQuery({
         queryKey: ['district'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/district/district_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/district/district_list`)
 
             const data = await res.json()
             return data
@@ -216,7 +216,7 @@ const EmployeeCreate = () => {
     } = useQuery({
         queryKey: ['upazilas'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/upazilas/upazilas_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/upazilas/upazilas_list`)
 
             const data = await res.json()
             return data
@@ -226,7 +226,7 @@ const EmployeeCreate = () => {
     } = useQuery({
         queryKey: ['bloods'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/blood_group/blood_group_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/blood_group/blood_group_all`)
 
             const data = await res.json()
             return data
@@ -336,7 +336,7 @@ const EmployeeCreate = () => {
     } = useQuery({
         queryKey: ['schoolShiftList'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_all`)
 
             const data = await res.json()
             return data
@@ -718,7 +718,7 @@ const EmployeeCreate = () => {
         const newName = `${fileName}.${extension}`;
         formData.append('files', file, newName);
 
-        axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5003/employe/employe_image`, formData, {
+        axios.post(`${process.env.NEXT_PUBLIC_API_URL}/:5003/employe/employe_image`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             },
@@ -785,7 +785,7 @@ const EmployeeCreate = () => {
         const newName = `${fileName}.${extension}`;
         formData.append('files', file, newName);
 
-        axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5003/employe/employe_image`, formData, {
+        axios.post(`${process.env.NEXT_PUBLIC_API_URL}/:5003/employe/employe_image`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data'
             },
@@ -809,7 +809,7 @@ const EmployeeCreate = () => {
     } = useQuery({
         queryKey: ['genderList'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/gender/gender_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/gender/gender_list`)
 
             const data = await res.json()
             return data
@@ -820,7 +820,7 @@ const EmployeeCreate = () => {
     } = useQuery({
         queryKey: ['religionList'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/religion/religion_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/religion/religion_list`)
 
             const data = await res.json()
             return data
@@ -831,7 +831,7 @@ const EmployeeCreate = () => {
     } = useQuery({
         queryKey: ['designationList'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/designation/designation_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/designation/designation_list`)
 
             const data = await res.json()
             return data
@@ -842,7 +842,7 @@ const EmployeeCreate = () => {
     } = useQuery({
         queryKey: ['branchAll'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/branch/branch_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/branch/branch_all`)
 
             const data = await res.json()
             return data
@@ -856,7 +856,7 @@ console.log(sameAsLiving)
 const { data: smsSettings = [],  } = useQuery({
     queryKey: ['smsSettings'],
     queryFn: async () => {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/smsSettings`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/smsSettings`);
         const data = await res.json();
         return data;
     }
@@ -925,7 +925,7 @@ const sendOtpToEmployees = () => {
                 .replace('[[joining_date]]', formatDate(formattedDisplayDate))
                 .replace('[[sms_time]]', smsTime);
 
-            axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance/attendance_otp`, {
+            axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance/attendance_otp`, {
                 // quick_api: quickApi,
                 formattedUrl,
                 mobile: fieldes.mobile,
@@ -946,7 +946,7 @@ console.log(formattedDisplayDate)
 const { data: attendance_sms_campaign_categorys = [] } = useQuery({
     queryKey: ['attendance_sms_campaign_categorys'],
     queryFn: async () => {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance_sms/attendance_sms_campaign_category`)
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance_sms/attendance_sms_campaign_category`)
         const data = await res.json()
         return data
     }
@@ -1203,7 +1203,7 @@ const employee_create = (event) => {
     }
     console.log(uniqueFields)
     // 
-    fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/employee/employee_create`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/employee/employee_create`, {
         method: 'POST',
         headers: {
             'content-type': 'application/json',
@@ -2022,7 +2022,7 @@ onChange={employee_input_change}
                                                                 </div>
                                                                 <input type="text" className='d-none' value={uploadedFileUrl} name='photo' />
                                                                 <div id="software_logo" className="logo bg-light img-thumbnail">
-                                                                    {uploadedFileUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${uploadedFileUrl}`} alt="Uploaded" className="img-fluid" />}
+                                                                    {uploadedFileUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${uploadedFileUrl}`} alt="Uploaded" className="img-fluid" />}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2058,7 +2058,7 @@ onChange={employee_input_change}
                                                                 </div>
                                                                 <input name='signature_image' type="text" className='d-none' value={uploadedImageUrl} />
                                                                 <div id="software_logo" className="logo bg-light img-thumbnail">
-                                                                    {uploadedImageUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${uploadedImageUrl}`} alt="Uploaded" className="img-fluid" />}
+                                                                    {uploadedImageUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${uploadedImageUrl}`} alt="Uploaded" className="img-fluid" />}
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -2153,7 +2153,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['payRoll'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/pay_roll/pay_roll_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/pay_roll/pay_roll_all`)
 
 //             const data = await res.json()
 //             return data
@@ -2164,7 +2164,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['educationName'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/education/education_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/education/education_list`)
 
 //             const data = await res.json()
 //             return data
@@ -2175,7 +2175,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['divisions'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/divisions/divisions_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/divisions/divisions_list`)
 
 //             const data = await res.json()
 //             return data
@@ -2186,7 +2186,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['district'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/district/district_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/district/district_list`)
 
 //             const data = await res.json()
 //             return data
@@ -2197,7 +2197,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['upazilas'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/upazilas/upazilas_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/upazilas/upazilas_list`)
 
 //             const data = await res.json()
 //             return data
@@ -2388,7 +2388,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['schoolShiftList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_all`)
 
 //             const data = await res.json()
 //             return data
@@ -2924,7 +2924,7 @@ export default EmployeeCreate;
 //         }
 //         console.log(uniqueFields)
 //         // 
-//         fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/employee/employee_create`, {
+//         fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/employee/employee_create`, {
 //             method: 'POST',
 //             headers: {
 //                 'content-type': 'application/json',
@@ -2996,7 +2996,7 @@ export default EmployeeCreate;
 //         const newName = `${fileName}.${extension}`;
 //         formData.append('files', file, newName);
 
-//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5003/brand/brand_image`, formData, {
+//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/:5003/brand/brand_image`, formData, {
 //             headers: {
 //                 'Content-Type': 'multipart/form-data'
 //             },
@@ -3063,7 +3063,7 @@ export default EmployeeCreate;
 //         const newName = `${fileName}.${extension}`;
 //         formData.append('files', file, newName);
 
-//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5003/brand/brand_image`, formData, {
+//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/:5003/brand/brand_image`, formData, {
 //             headers: {
 //                 'Content-Type': 'multipart/form-data'
 //             },
@@ -3087,7 +3087,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['genderList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/gender/gender_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/gender/gender_list`)
 
 //             const data = await res.json()
 //             return data
@@ -3098,7 +3098,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['religionList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/religion/religion_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/religion/religion_list`)
 
 //             const data = await res.json()
 //             return data
@@ -3109,7 +3109,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['designationList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/designation/designation_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/designation/designation_list`)
 
 //             const data = await res.json()
 //             return data
@@ -3120,7 +3120,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['branchAll'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/branch/branch_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/branch/branch_all`)
 
 //             const data = await res.json()
 //             return data
@@ -4107,7 +4107,7 @@ export default EmployeeCreate;
 //                                                                 </div>
 //                                                                 <input type="text" className='d-none' value={uploadedFileUrl} name='photo' />
 //                                                                 <div id="software_logo" className="logo bg-light img-thumbnail">
-//                                                                     {uploadedFileUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${uploadedFileUrl}`} alt="Uploaded" className="img-fluid" />}
+//                                                                     {uploadedFileUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${uploadedFileUrl}`} alt="Uploaded" className="img-fluid" />}
 //                                                                 </div>
 //                                                             </div>
 //                                                         </div>
@@ -4143,7 +4143,7 @@ export default EmployeeCreate;
 //                                                                 </div>
 //                                                                 <input name='signature_image' type="text" className='d-none' value={uploadedImageUrl} />
 //                                                                 <div id="software_logo" className="logo bg-light img-thumbnail">
-//                                                                     {uploadedImageUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${uploadedImageUrl}`} alt="Uploaded" className="img-fluid" />}
+//                                                                     {uploadedImageUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${uploadedImageUrl}`} alt="Uploaded" className="img-fluid" />}
 //                                                                 </div>
 //                                                             </div>
 //                                                         </div>
@@ -4180,7 +4180,7 @@ export default EmployeeCreate;
 //     const { data: divisions = [] } = useQuery({
 //         queryKey: ['divisions'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/divisions/divisions_list`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/divisions/divisions_list`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -4189,7 +4189,7 @@ export default EmployeeCreate;
 //     const { data: district = [] } = useQuery({
 //         queryKey: ['district'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/district/district_list`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/district/district_list`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -4198,7 +4198,7 @@ export default EmployeeCreate;
 //     const { data: upazilas = [] } = useQuery({
 //         queryKey: ['upazilas'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/upazilas/upazilas_list`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/upazilas/upazilas_list`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -4459,7 +4459,7 @@ export default EmployeeCreate;
 //     const { data: divisions = [] } = useQuery({
 //         queryKey: ['divisions'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/divisions/divisions_list`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/divisions/divisions_list`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -4468,7 +4468,7 @@ export default EmployeeCreate;
 //     const { data: district = [] } = useQuery({
 //         queryKey: ['district'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/district/district_list`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/district/district_list`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -4477,7 +4477,7 @@ export default EmployeeCreate;
 //     const { data: upazilas = [] } = useQuery({
 //         queryKey: ['upazilas'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/upazilas/upazilas_list`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/upazilas/upazilas_list`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -4748,7 +4748,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['divisions'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/divisions/divisions_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/divisions/divisions_list`)
 
 //             const data = await res.json()
 //             return data
@@ -4759,7 +4759,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['district'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/district/district_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/district/district_list`)
 
 //             const data = await res.json()
 //             return data
@@ -4770,7 +4770,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['upazilas'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/upazilas/upazilas_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/upazilas/upazilas_list`)
 
 //             const data = await res.json()
 //             return data
@@ -5154,7 +5154,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['payRoll'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/pay_roll/pay_roll_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/pay_roll/pay_roll_all`)
 
 //             const data = await res.json()
 //             return data
@@ -5165,7 +5165,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['educationName'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/education/education_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/education/education_list`)
 
 //             const data = await res.json()
 //             return data
@@ -5176,7 +5176,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['divisions'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/divisions/divisions_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/divisions/divisions_list`)
 
 //             const data = await res.json()
 //             return data
@@ -5187,7 +5187,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['district'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/district/district_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/district/district_list`)
 
 //             const data = await res.json()
 //             return data
@@ -5198,7 +5198,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['upazilas'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/upazilas/upazilas_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/upazilas/upazilas_list`)
 
 //             const data = await res.json()
 //             return data
@@ -5293,7 +5293,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['schoolShiftList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_all`)
 
 //             const data = await res.json()
 //             return data
@@ -5809,7 +5809,7 @@ export default EmployeeCreate;
 //         }
 //         console.log(uniqueFields)
 //         // 
-//         fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/employee/employee_create`, {
+//         fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/employee/employee_create`, {
 //             method: 'POST',
 //             headers: {
 //                 'content-type': 'application/json',
@@ -5880,7 +5880,7 @@ export default EmployeeCreate;
 //         const newName = `${fileName}.${extension}`;
 //         formData.append('files', file, newName);
 
-//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5003/brand/brand_image`, formData, {
+//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/:5003/brand/brand_image`, formData, {
 //             headers: {
 //                 'Content-Type': 'multipart/form-data'
 //             },
@@ -5947,7 +5947,7 @@ export default EmployeeCreate;
 //         const newName = `${fileName}.${extension}`;
 //         formData.append('files', file, newName);
 
-//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5003/brand/brand_image`, formData, {
+//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/:5003/brand/brand_image`, formData, {
 //             headers: {
 //                 'Content-Type': 'multipart/form-data'
 //             },
@@ -5971,7 +5971,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['genderList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/gender/gender_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/gender/gender_list`)
 
 //             const data = await res.json()
 //             return data
@@ -5982,7 +5982,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['religionList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/religion/religion_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/religion/religion_list`)
 
 //             const data = await res.json()
 //             return data
@@ -5993,7 +5993,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['designationList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/designation/designation_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/designation/designation_list`)
 
 //             const data = await res.json()
 //             return data
@@ -6004,7 +6004,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['branchAll'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/branch/branch_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/branch/branch_all`)
 
 //             const data = await res.json()
 //             return data
@@ -6742,7 +6742,7 @@ export default EmployeeCreate;
 //                                                                 </div>
 //                                                                 <input type="text" className='d-none' value={uploadedFileUrl} name='photo' />
 //                                                                 <div id="software_logo" className="logo bg-light img-thumbnail">
-//                                                                     {uploadedFileUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${uploadedFileUrl}`} alt="Uploaded" className="img-fluid" />}
+//                                                                     {uploadedFileUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${uploadedFileUrl}`} alt="Uploaded" className="img-fluid" />}
 //                                                                 </div>
 //                                                             </div>
 //                                                         </div>
@@ -6778,7 +6778,7 @@ export default EmployeeCreate;
 //                                                                 </div>
 //                                                                 <input name='signature_image' type="text" className='d-none' value={uploadedImageUrl} />
 //                                                                 <div id="software_logo" className="logo bg-light img-thumbnail">
-//                                                                     {uploadedImageUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${uploadedImageUrl}`} alt="Uploaded" className="img-fluid" />}
+//                                                                     {uploadedImageUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${uploadedImageUrl}`} alt="Uploaded" className="img-fluid" />}
 //                                                                 </div>
 //                                                             </div>
 //                                                         </div>
@@ -6873,7 +6873,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['payRoll'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/pay_roll/pay_roll_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/pay_roll/pay_roll_all`)
 
 //             const data = await res.json()
 //             return data
@@ -6884,7 +6884,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['educationName'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/education/education_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/education/education_list`)
 
 //             const data = await res.json()
 //             return data
@@ -6895,7 +6895,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['divisions'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/divisions/divisions_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/divisions/divisions_list`)
 
 //             const data = await res.json()
 //             return data
@@ -6906,7 +6906,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['district'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/district/district_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/district/district_list`)
 
 //             const data = await res.json()
 //             return data
@@ -6917,7 +6917,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['upazilas'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/upazilas/upazilas_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/upazilas/upazilas_list`)
 
 //             const data = await res.json()
 //             return data
@@ -7002,7 +7002,7 @@ export default EmployeeCreate;
 //     } = useQuery({
 //         queryKey: ['schoolShiftList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/school_shift/school_shift_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/school_shift/school_shift_all`)
 
 //             const data = await res.json()
 //             return data
@@ -7482,7 +7482,7 @@ export default EmployeeCreate;
 //             designation_id
 //         }
 
-//         fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/employee/employee_create`, {
+//         fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/employee/employee_create`, {
 //             method: 'POST',
 //             headers: {
 //                 'content-type': 'application/json',
@@ -7550,7 +7550,7 @@ export default EmployeeCreate;
 //         const newName = `${fileName}.${extension}`;
 //         formData.append('files', file, newName);
 
-//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5003/brand/brand_image`, formData, {
+//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/:5003/brand/brand_image`, formData, {
 //             headers: {
 //                 'Content-Type': 'multipart/form-data'
 //             },
@@ -7617,7 +7617,7 @@ export default EmployeeCreate;
 //         const newName = `${fileName}.${extension}`;
 //         formData.append('files', file, newName);
 
-//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5003/brand/brand_image`, formData, {
+//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/:5003/brand/brand_image`, formData, {
 //             headers: {
 //                 'Content-Type': 'multipart/form-data'
 //             },
@@ -8266,7 +8266,7 @@ export default EmployeeCreate;
 //                                                                 </div>
 //                                                                 <input type="text" className='d-none' value={uploadedFileUrl} name='photo' />
 //                                                                 <div id="software_logo" className="logo bg-light img-thumbnail">
-//                                                                     {uploadedFileUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${uploadedFileUrl}`} alt="Uploaded" className="img-fluid" />}
+//                                                                     {uploadedFileUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${uploadedFileUrl}`} alt="Uploaded" className="img-fluid" />}
 //                                                                 </div>
 //                                                             </div>
 //                                                         </div>
@@ -8305,7 +8305,7 @@ export default EmployeeCreate;
 //                                                                 </div>
 //                                                                 <input name='signature_image' type="text" className='d-none' value={uploadedImageUrl} />
 //                                                                 <div id="software_logo" className="logo bg-light img-thumbnail">
-//                                                                     {uploadedImageUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${uploadedImageUrl}`} alt="Uploaded" className="img-fluid" />}
+//                                                                     {uploadedImageUrl && <img src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${uploadedImageUrl}`} alt="Uploaded" className="img-fluid" />}
 //                                                                 </div>
 //                                                             </div>
 //                                                         </div>

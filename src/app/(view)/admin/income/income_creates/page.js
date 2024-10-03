@@ -28,7 +28,7 @@ const CreateIncome = () => {
         queryKey: ['supplierLastDue', api], // Include api in queryKey to trigger refetch when api changes
         queryFn: async () => {
             if (api) {
-                const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002${api}`);
+                const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:5002${api}`);
                 const data = await res.json();
                 return data;
             }
@@ -215,7 +215,7 @@ const CreateIncome = () => {
             console.log(productData);
 
             // /Admin/income/income_create
-            fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/income/income_create`, {
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/income/income_create`, {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json',
@@ -302,7 +302,7 @@ const CreateIncome = () => {
     } = useQuery({
         queryKey: ['incomeCategories'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/income_category/income_category_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/income_category/income_category_all`)
 
             const data = await res.json()
             return data
@@ -314,7 +314,7 @@ const CreateIncome = () => {
     } = useQuery({
         queryKey: ['supplierList'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/supplier/supplier_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/supplier/supplier_list`)
 
             const data = await res.json()
             return data
@@ -325,7 +325,7 @@ const CreateIncome = () => {
     } = useQuery({
         queryKey: ['module_settings'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/module_settings/module_settings_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/module_settings/module_settings_all`)
 
             const data = await res.json()
             return data

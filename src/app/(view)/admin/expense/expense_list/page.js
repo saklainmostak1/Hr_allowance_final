@@ -28,7 +28,7 @@
 //     } = useQuery({
 //         queryKey: ['expenseList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_list`)
 
 //             const data = await res.json()
 //             return data
@@ -40,7 +40,7 @@
 
 //     const expense_search = () => {
 //         setLoading(true);
-//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_search`, {
+//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_search`, {
 //             selectedColumns,
 //             searchQuery,
 
@@ -89,7 +89,7 @@
 //     } = useQuery({
 //         queryKey: ['expenseCategory'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expence_category/expence_category_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expence_category/expence_category_all`)
 
 //             const data = await res.json()
 //             return data
@@ -101,7 +101,7 @@
 //     } = useQuery({
 //         queryKey: ['moduleInfo'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/admin/module_info/module_info_all/${userId}`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/admin/module_info/module_info_all/${userId}`)
 
 //             const data = await res.json()
 //             return data
@@ -133,7 +133,7 @@
 //     } = useQuery({
 //         queryKey: ['module_settings'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/module_settings/module_settings_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/module_settings/module_settings_all`)
 
 //             const data = await res.json()
 //             return data
@@ -173,7 +173,7 @@
 //     }
 //     const [pageUsers, setPageUsers] = useState([]);
 //     const caregory_list = async () => {
-//         const url = `${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_list/${currentPage}/${dataPerPage}`;
+//         const url = `${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_list/${currentPage}/${dataPerPage}`;
 //         const response = await fetch(url);
 //         const data = await response.json();
 //         setPageUsers(data);
@@ -189,7 +189,7 @@
 //         console.log(id)
 //         const proceed = window.confirm(`Are You Sure delete${id}`)
 //         if (proceed) {
-//             fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_delete/${id}`, {
+//             fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_delete/${id}`, {
 //                 method: "POST",
 
 //             })
@@ -205,7 +205,7 @@
 //     }
 //     const printSingleData = (id) => {
 //         // Fetch data for the specific ID
-//         axios.get(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_all/${id}`)
+//         axios.get(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_all/${id}`)
 //             .then(response => {
 //                 const expenseData = response.data;
 //                 console.log(expenseData);
@@ -231,7 +231,7 @@
 //     };
 //     // const printSingleData = (id) => {
 //     //             // Fetch data for the specific ID
-//     //             axios.get(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_all/${id}`)
+//     //             axios.get(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_all/${id}`)
 //     //                 .then(response => {
 //     //                     const expenseData = response.data;
 //     //                     console.log(expenseData);
@@ -580,7 +580,7 @@ const ExpenseList = ({ searchParams }) => {
     } = useQuery({
         queryKey: ['supplierList'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/supplier/supplier_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/supplier/supplier_list`)
 
             const data = await res.json()
             return data
@@ -592,7 +592,7 @@ const ExpenseList = ({ searchParams }) => {
     } = useQuery({
         queryKey: ['expenseList'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_list`)
 
             const data = await res.json()
             return data
@@ -660,7 +660,7 @@ const ExpenseList = ({ searchParams }) => {
     } = useQuery({
         queryKey: ['expenseCategory'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expence_category/expence_category_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expence_category/expence_category_all`)
 
             const data = await res.json()
             return data
@@ -684,7 +684,7 @@ const ExpenseList = ({ searchParams }) => {
     } = useQuery({
         queryKey: ['moduleInfo'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/admin/module_info/module_info_all/${userId}`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/admin/module_info/module_info_all/${userId}`)
 
             const data = await res.json()
             return data
@@ -720,7 +720,7 @@ const ExpenseList = ({ searchParams }) => {
     } = useQuery({
         queryKey: ['module_settings'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/module_settings/module_settings_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/module_settings/module_settings_all`)
 
             const data = await res.json()
             return data
@@ -769,7 +769,7 @@ const ExpenseList = ({ searchParams }) => {
     
     const expense_search = () => {
         setLoading(true);
-        axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_search`, {
+        axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_search`, {
             selectedColumns,
             searchQuery,
             fromDate,
@@ -837,7 +837,7 @@ const ExpenseList = ({ searchParams }) => {
     }
     const [pageUsers, setPageUsers] = useState([]);
     const caregory_list = async () => {
-        const url = `${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_list/${currentPage}/${dataPerPage}`;
+        const url = `${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_list/${currentPage}/${dataPerPage}`;
         const response = await fetch(url);
         const data = await response.json();
         setPageUsers(data);
@@ -916,7 +916,7 @@ const ExpenseList = ({ searchParams }) => {
         // Open a new window for printing
         // setLoading(true);
         try {
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_search`, {
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_search`, {
                 selectedColumns,
                 searchQuery,
                 fromDate,
@@ -988,8 +988,8 @@ const ExpenseList = ({ searchParams }) => {
                         htmlContent += '<td>';
                         if (column === 'file_path') {
                             // Special handling for the 'File Path' column to display images
-                            htmlContent += `<img src="${process.env.NEXT_PUBLIC_API_URL}:5003/${brand.file_path}" style="max-width: 100px;" alt="Image"/>`;
-                            console.log(`${process.env.NEXT_PUBLIC_API_URL}:5003/${brand.file_path}`);
+                            htmlContent += `<img src="${process.env.NEXT_PUBLIC_API_URL}/:5003/${brand.file_path}" style="max-width: 100px;" alt="Image"/>`;
+                            console.log(`${process.env.NEXT_PUBLIC_API_URL}/:5003/${brand.file_path}`);
                         } else {
                             htmlContent += brand[column]; // Default rendering for other columns
                         }
@@ -1026,7 +1026,7 @@ const ExpenseList = ({ searchParams }) => {
         console.log(id)
         const proceed = window.confirm(`Are You Sure delete${id}`)
         if (proceed) {
-            fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_delete/${id}`, {
+            fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_delete/${id}`, {
                 method: "POST",
 
             })
@@ -1045,7 +1045,7 @@ const ExpenseList = ({ searchParams }) => {
     const expense_word_download = async () => {
 
         try {
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_search`, {
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_search`, {
                 selectedColumns,
                 searchQuery,
                 fromDate,
@@ -1149,7 +1149,7 @@ const ExpenseList = ({ searchParams }) => {
     const expense_excel_download = async () => {
 
         try {
-            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_search`, {
+            const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_search`, {
                 selectedColumns,
                 searchQuery,
                 fromDate,
@@ -1231,7 +1231,7 @@ const ExpenseList = ({ searchParams }) => {
 
         // setLoading(true);
 
-        const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_search`, {
+        const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_search`, {
             selectedColumns,
             searchQuery,
             fromDate,
@@ -1242,7 +1242,7 @@ const ExpenseList = ({ searchParams }) => {
         const orientation = selectedLayout === 'landscape' ? 'landscape' : 'portrait';
 
         try {
-            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_pdf`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_pdf`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -1282,7 +1282,7 @@ const ExpenseList = ({ searchParams }) => {
 
     const printSingleData = (id) => {
         // Fetch data for the specific ID
-        axios.get(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_all/${id}`)
+        axios.get(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_all/${id}`)
             .then(response => {
                 const expenseData = response.data;
                 console.log(expenseData);
@@ -1383,14 +1383,14 @@ const ExpenseList = ({ searchParams }) => {
             // setLoading(true);
 
             // First request to get the expense data
-            const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_all/${id}`);
+            const response = await axios.get(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_all/${id}`);
             // console.log(response)
             console.log(response.data);
             const searchResults = response.data;
 
 
             // Second request to generate the PDF
-            const pdfResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_single_pdf`, {
+            const pdfResponse = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_single_pdf`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -1860,7 +1860,7 @@ const ExpenseList = ({ searchParams }) => {
                                                                                 <img
                                                                                     className=" img-thumbnail"
                                                                                     style={{ width: '100px' }}
-                                                                                    src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${expense.file_path}`}
+                                                                                    src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${expense.file_path}`}
                                                                                     alt="No Image"
                                                                                 />
                                                                             </>
@@ -2040,7 +2040,7 @@ const ExpenseList = ({ searchParams }) => {
                                                                                     <img
                                                                                         className=" img-thumbnail"
                                                                                         style={{ width: '100px' }}
-                                                                                        src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${expense.file_path}`}
+                                                                                        src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${expense.file_path}`}
                                                                                         alt="No Image"
                                                                                     />
                                                                                 </>

@@ -18,7 +18,7 @@ const SalaryCreate = () => {
         queryKey: ["apiData"],
         queryFn: async () => {
             const res = await fetch(
-                `${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/sms_api/sms_api_all`
+                `${process.env.NEXT_PUBLIC_API_URL}/Admin/sms_api/sms_api_all`
             );
 
             const data = await res.json();
@@ -120,7 +120,7 @@ const SalaryCreate = () => {
     } = useQuery({
         queryKey: ['account_head'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/account_head/account_head_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/account_head/account_head_list`)
 
             const data = await res.json()
             return data
@@ -196,7 +196,7 @@ const SalaryCreate = () => {
     const { data: designations = [], isLoading: isDesignationsLoading } = useQuery({
         queryKey: ['designations'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/designation/designation_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/designation/designation_list`)
             const data = await res.json()
             return data
         }
@@ -205,7 +205,7 @@ const SalaryCreate = () => {
     const { data: salaries = [] } = useQuery({
         queryKey: ['salaries'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/salary/salary_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/salary/salary_all`)
             const data = await res.json()
             return data
         }
@@ -223,7 +223,7 @@ const SalaryCreate = () => {
             return
         }
 
-        axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/salary/salary_search`, {
+        axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/salary/salary_search`, {
             designation
         })
             .then(response => {
@@ -253,7 +253,7 @@ const SalaryCreate = () => {
     const { data: attendance = [] } = useQuery({
         queryKey: ['attendance'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance_all/attendance_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance_all/attendance_all`)
             const data = await res.json()
             return data
         }
@@ -270,7 +270,7 @@ const SalaryCreate = () => {
     const { data: holidays = [] } = useQuery({
         queryKey: ['holidays'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/yearly_holiday/yearly_holiday_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/yearly_holiday/yearly_holiday_all`)
             const data = await res.json()
             return data
         }
@@ -286,7 +286,7 @@ const SalaryCreate = () => {
     const { data: leavesDays = [] } = useQuery({
         queryKey: ['leavesDays'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/leave_application/leave_application_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/leave_application/leave_application_all`)
             const data = await res.json()
             return data
         }
@@ -297,7 +297,7 @@ const SalaryCreate = () => {
     const { data: leavesDaysApproved = [] } = useQuery({
         queryKey: ['leavesDaysApproved'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/leave_approved/leave_approved_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/leave_approved/leave_approved_all`)
             const data = await res.json()
             return data
         }
@@ -322,7 +322,7 @@ const SalaryCreate = () => {
     const { data: salaryList = [], } = useQuery({
         queryKey: ['salaryList'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/salary/salary_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/salary/salary_list`)
             const data = await res.json()
             return data
         }
@@ -358,7 +358,7 @@ const SalaryCreate = () => {
     //             };
     //         });
     // console.log(formToSubmit)
-    // // ${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/salary/salary_create
+    // // ${process.env.NEXT_PUBLIC_API_URL}/Admin/salary/salary_create
     //         axios.post(``, formToSubmit)
     //             .then(response => {
     //                 alert('Data submitted successfully!');
@@ -391,7 +391,7 @@ const SalaryCreate = () => {
     const { data: smsSettings = [], } = useQuery({
         queryKey: ['smsSettings'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/smsSettings`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/smsSettings`);
             const data = await res.json();
             return data;
         }
@@ -478,7 +478,7 @@ const SalaryCreate = () => {
                 .replace('[[payroll_total]]', employee.salary)
                 .replace('[[sms_time]]', smsTime);
 
-            axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance/attendance_otp`, {
+            axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance/attendance_otp`, {
                 // quick_api: quickApi,
                 formattedUrl,
                 mobile: employee.mobile,
@@ -500,7 +500,7 @@ const SalaryCreate = () => {
     const { data: attendance_sms_campaign_categorys = [] } = useQuery({
         queryKey: ['attendance_sms_campaign_categorys'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance_sms/attendance_sms_campaign_category`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance_sms/attendance_sms_campaign_category`)
             const data = await res.json()
             return data
         }
@@ -554,7 +554,7 @@ const SalaryCreate = () => {
         console.log(formToSubmit);
 
         // Replace the empty string with your API URL
-        axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/salary/salary_create`, formToSubmit)
+        axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/salary/salary_create`, formToSubmit)
             .then(response => {
                 // alert('Data submitted successfully!');
             })
@@ -568,7 +568,7 @@ const SalaryCreate = () => {
     const { data: absents = [] } = useQuery({
         queryKey: ['absents'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/absent/absent_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/absent/absent_all`)
             const data = await res.json()
             return data
         }
@@ -918,7 +918,7 @@ export default SalaryCreate;
 //     } = useQuery({
 //         queryKey: ['designations'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/designation/designation_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/designation/designation_list`)
 
 //             const data = await res.json()
 //             return data
@@ -929,7 +929,7 @@ export default SalaryCreate;
 //     } = useQuery({
 //         queryKey: ['salarys'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/salary/salary_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/salary/salary_all`)
 
 //             const data = await res.json()
 //             return data
@@ -945,7 +945,7 @@ export default SalaryCreate;
 
 //     const salary_search = () => {
 //         setLoading(true);
-//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/salary/salary_search`, {
+//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/salary/salary_search`, {
 //             designation
 //         })
 //             .then(response => {
@@ -1322,7 +1322,7 @@ export default SalaryCreate;
 //     const { data: designations = [], isLoading: isDesignationsLoading } = useQuery({
 //         queryKey: ['designations'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/designation/designation_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/designation/designation_list`)
 //             const data = await res.json()
 //             return data
 //         }
@@ -1331,7 +1331,7 @@ export default SalaryCreate;
 //     const { data: salaries = [] } = useQuery({
 //         queryKey: ['salaries'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/salary/salary_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/salary/salary_all`)
 //             const data = await res.json()
 //             return data
 //         }
@@ -1349,7 +1349,7 @@ export default SalaryCreate;
 //             return
 //         }
 
-//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/salary/salary_search`, {
+//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/Admin/salary/salary_search`, {
 //             designation
 //         })
 //             .then(response => {
@@ -1382,7 +1382,7 @@ export default SalaryCreate;
 //     const { data: attendance = [] } = useQuery({
 //         queryKey: ['attendance'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/attendance_all/attendance_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/attendance_all/attendance_all`)
 //             const data = await res.json()
 //             return data
 //         }
@@ -1408,7 +1408,7 @@ export default SalaryCreate;
 //     const { data: holidays = [] } = useQuery({
 //         queryKey: ['holidays'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/yearly_holiday/yearly_holiday_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/yearly_holiday/yearly_holiday_all`)
 //             const data = await res.json()
 //             return data
 //         }
@@ -1426,7 +1426,7 @@ export default SalaryCreate;
 //     const { data: leavesDays = [] } = useQuery({
 //         queryKey: ['leavesDays'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/leave_application/leave_application_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/leave_application/leave_application_all`)
 //             const data = await res.json()
 //             return data
 //         }
@@ -1440,7 +1440,7 @@ export default SalaryCreate;
 //     const { data: leavesDaysApproved = [] } = useQuery({
 //         queryKey: ['leavesDaysApproved'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/leave_approved/leave_approved_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/leave_approved/leave_approved_all`)
 //             const data = await res.json()
 //             return data
 //         }

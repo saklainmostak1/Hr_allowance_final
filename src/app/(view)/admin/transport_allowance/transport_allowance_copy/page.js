@@ -32,7 +32,7 @@
 //     const { data: transportAllowanceSingle, isLoading, refetch } = useQuery({
 //         queryKey: ['transportAllowanceSingle', id],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/transport_allowance/transport_allowance_all/${id}`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/transport_allowance/transport_allowance_all/${id}`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -253,9 +253,9 @@
 
 
 //         console.log(schoolShift)
-//         // ${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/mobile_allowance/mobile_allowance_create
+//         // ${process.env.NEXT_PUBLIC_API_URL}/Admin/mobile_allowance/mobile_allowance_create
 
-//         fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/transport_allowance/transport_allowance_create`, {
+//         fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/transport_allowance/transport_allowance_create`, {
 //             method: 'POST',
 //             headers: {
 //                 'content-type': 'application/json',
@@ -458,7 +458,7 @@ const CopyTransportAllowance = ({ id }) => {
     const { data: transportAllowanceSingle, } = useQuery({
         queryKey: ['transportAllowanceSingle', id],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/transport_allowance/transport_allowance_all/${id}`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/transport_allowance/transport_allowance_all/${id}`);
             const data = await res.json();
             return data;
         }
@@ -753,9 +753,9 @@ const CopyTransportAllowance = ({ id }) => {
 
 
         console.log(schoolShift)
-        // ${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/mobile_allowance/mobile_allowance_create
+        // ${process.env.NEXT_PUBLIC_API_URL}/Admin/mobile_allowance/mobile_allowance_create
 
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/transport_allowance/transport_allowance_create`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/transport_allowance/transport_allowance_create`, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -782,7 +782,7 @@ const CopyTransportAllowance = ({ id }) => {
     const { data: branches = [] } = useQuery({
         queryKey: ['branches'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/branch/branch_all`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/branch/branch_all`);
             const data = await res.json();
             return data;
         }
@@ -792,7 +792,7 @@ const CopyTransportAllowance = ({ id }) => {
     const { data: employeeList = [], isLoading } = useQuery({
         queryKey: ['employeeList'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/employee/employee_all_list`);
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/employee/employee_all_list`);
             const data = await res.json();
             return data;
         }

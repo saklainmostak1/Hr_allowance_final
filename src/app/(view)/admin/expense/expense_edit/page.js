@@ -31,7 +31,7 @@
 //     const handleSubmit = async (e) => {
 //         e.preventDefault();
 //         try {
-//             const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}:689088/Admin/expense/expense_update/${id}`, formData);
+//             const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/:689088/Admin/expense/expense_update/${id}`, formData);
 //             console.log(res.data); // handle success response
 //         } catch (error) {
 //             console.error('Error updating expense:', error.response.data);
@@ -125,7 +125,7 @@
 //         queryKey: ['supplierLastDue', api], // Include api in queryKey to trigger refetch when api changes
 //         queryFn: async () => {
 //             if (api) {
-//                 const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:689088${api}`);
+//                 const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:689088${api}`);
 //                 const data = await res.json();
 //                 return data;
 //             }
@@ -156,7 +156,7 @@
 //     } = useQuery({
 //         queryKey: ['expenseSingle'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:689088/Admin/expense/expense_all/${id}`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:689088/Admin/expense/expense_all/${id}`)
 
 //             const data = await res.json()
 //             return data
@@ -314,7 +314,7 @@
 //         });
 
 //         // Make a POST request to your API endpoint
-//         fetch(`${process.env.NEXT_PUBLIC_API_URL}:689088/Admin/expense/expense_update/${id}`, {
+//         fetch(`${process.env.NEXT_PUBLIC_API_URL}/:689088/Admin/expense/expense_update/${id}`, {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json',
@@ -344,7 +344,7 @@
 //         // event.preventDefault();
 //         // try {
 //         //     // Perform API call to update expense details
-//         //     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:689088/Admin/expense/expense_update/${id}`, {
+//         //     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:689088/Admin/expense/expense_update/${id}`, {
 //         //         method: 'POST',
 //         //         headers: {
 //         //             'Content-Type': 'application/json'
@@ -415,7 +415,7 @@
 //     } = useQuery({
 //         queryKey: ['expenseCategories'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:689088/Admin/expence_category/expence_category_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:689088/Admin/expence_category/expence_category_all`)
 
 //             const data = await res.json()
 //             return data
@@ -427,7 +427,7 @@
 //     } = useQuery({
 //         queryKey: ['supplierList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:689088/Admin/supplier/supplier_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:689088/Admin/supplier/supplier_list`)
 
 //             const data = await res.json()
 //             return data
@@ -440,7 +440,7 @@
 //     } = useQuery({
 //         queryKey: ['module_settings'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:689088/Admin/module_settings/module_settings_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:689088/Admin/module_settings/module_settings_all`)
 
 //             const data = await res.json()
 //             return data
@@ -1039,7 +1039,7 @@
 //         queryKey: ['supplierLastDue', api], // Include api in queryKey to trigger refetch when api changes
 //         queryFn: async () => {
 //             if (api) {
-//                 const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002${api}`);
+//                 const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:5002${api}`);
 //                 const data = await res.json();
 //                 return data;
 //             }
@@ -1057,7 +1057,7 @@
 //     } = useQuery({
 //         queryKey: ['expenseSingle'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_all/${id}`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_all/${id}`)
 
 //             const data = await res.json()
 //             return data
@@ -1151,7 +1151,7 @@
 //         console.log(file);
 //         setFileNames(newName);
 
-//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5003/period/period_image`, formData)
+//         axios.post(`${process.env.NEXT_PUBLIC_API_URL}/:5003/period/period_image`, formData)
 //             .then(res => {
 //                 console.log(res);
 //             })
@@ -1361,7 +1361,7 @@
 //         }
 
 //         // Make a POST request to your API endpoint
-//         fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_update/${id}`, {
+//         fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_update/${id}`, {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json',
@@ -1473,7 +1473,7 @@
 //     } = useQuery({
 //         queryKey: ['expenseCategories'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expence_category/expence_category_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expence_category/expence_category_all`)
 
 //             const data = await res.json()
 //             return data
@@ -1485,7 +1485,7 @@
 //     } = useQuery({
 //         queryKey: ['supplierList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/supplier/supplier_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/supplier/supplier_list`)
 
 //             const data = await res.json()
 //             return data
@@ -1498,7 +1498,7 @@
 //     } = useQuery({
 //         queryKey: ['module_settings'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/module_settings/module_settings_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/module_settings/module_settings_all`)
 
 //             const data = await res.json()
 //             return data
@@ -1826,7 +1826,7 @@
 
 //                                                                                                         <img
 //                                                                                                             className="w-100"
-//                                                                                                             src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${expenseData.file_path}`}
+//                                                                                                             src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${expenseData.file_path}`}
 //                                                                                                             alt="Uploaded File"
 //                                                                                                         />
 //                                                                                                         <button
@@ -2270,7 +2270,7 @@ console.log(supplierId)
         queryKey: ['supplierLastDue', api], // Include api in queryKey to trigger refetch when api changes
         queryFn: async () => {
             if (api) {
-                const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002${api}`);
+                const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:5002${api}`);
                 const data = await res.json();
                 return data;
             }
@@ -2304,7 +2304,7 @@ console.log(supplierId)
     } = useQuery({
         queryKey: ['expenseSingle'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_all/${id}`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_all/${id}`)
 
             const data = await res.json()
             return data
@@ -2398,7 +2398,7 @@ console.log(supplierId)
         console.log(file);
         setFileNames(newName);
 
-        axios.post(`${process.env.NEXT_PUBLIC_API_URL}:5003/period/period_image`, formData)
+        axios.post(`${process.env.NEXT_PUBLIC_API_URL}/:5003/period/period_image`, formData)
             .then(res => {
                 console.log(res);
             })
@@ -2620,7 +2620,7 @@ console.log(supplierId)
         }
 
         // Make a POST request to your API endpoint
-        fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_update/${id}`, {
+        fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_update/${id}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -2745,7 +2745,7 @@ console.log(supplierId)
     } = useQuery({
         queryKey: ['expenseCategories'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expence_category/expence_category_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expence_category/expence_category_all`)
 
             const data = await res.json()
             return data
@@ -2757,7 +2757,7 @@ console.log(supplierId)
     } = useQuery({
         queryKey: ['supplierList'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/supplier/supplier_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/supplier/supplier_list`)
 
             const data = await res.json()
             return data
@@ -2770,7 +2770,7 @@ console.log(supplierId)
     } = useQuery({
         queryKey: ['module_settings'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/module_settings/module_settings_all`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/module_settings/module_settings_all`)
 
             const data = await res.json()
             return data
@@ -2808,7 +2808,7 @@ console.log(supplierId)
     } = useQuery({
         queryKey: ['account_head'],
         queryFn: async () => {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/account_head/account_head_list`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/account_head/account_head_list`)
 
             const data = await res.json()
             return data
@@ -3111,7 +3111,7 @@ console.log(supplierId)
 
                                                                                                         <img
                                                                                                             className="w-100"
-                                                                                                            src={`${process.env.NEXT_PUBLIC_API_URL}:5003/${expenseData.file_path}`}
+                                                                                                            src={`${process.env.NEXT_PUBLIC_API_URL}/:5003/${expenseData.file_path}`}
                                                                                                             alt="Uploaded File"
                                                                                                         />
                                                                                                         <button
@@ -3464,7 +3464,7 @@ export default EditExpense;
 //         queryKey: ['supplierLastDue', api], // Include api in queryKey to trigger refetch when api changes
 //         queryFn: async () => {
 //             if (api) {
-//                 const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002${api}`);
+//                 const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:5002${api}`);
 //                 const data = await res.json();
 //                 return data;
 //             }
@@ -3482,7 +3482,7 @@ export default EditExpense;
 //     } = useQuery({
 //         queryKey: ['expenseSingle'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_all/${id}`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_all/${id}`)
 
 //             const data = await res.json()
 //             return data
@@ -3643,7 +3643,7 @@ export default EditExpense;
 //     } = useQuery({
 //         queryKey: ['supplierList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/supplier/supplier_list`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/supplier/supplier_list`)
 
 //             const data = await res.json()
 //             return data
@@ -3654,7 +3654,7 @@ export default EditExpense;
 //     } = useQuery({
 //         queryKey: ['module_settings'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/module_settings/module_settings_all`)
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/module_settings/module_settings_all`)
 
 //             const data = await res.json()
 //             return data
@@ -4019,7 +4019,7 @@ export default EditExpense;
 //         queryKey: ['supplierLastDue', api],
 //         queryFn: async () => {
 //             if (api) {
-//                 const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002${api}`);
+//                 const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:5002${api}`);
 //                 return await res.json();
 //             }
 //         },
@@ -4032,7 +4032,7 @@ export default EditExpense;
 //     const { data: expenseSingle = [] } = useQuery({
 //         queryKey: ['expenseSingle'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_all/${id}`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_all/${id}`);
 //             return await res.json();
 //         }
 //     });
@@ -4146,7 +4146,7 @@ export default EditExpense;
 //     const { data: supplierList = [] } = useQuery({
 //         queryKey: ['supplierList'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/supplier/supplier_list`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/supplier/supplier_list`);
 //             return await res.json();
 //         }
 //     });
@@ -4154,7 +4154,7 @@ export default EditExpense;
 //     const { data: module_settings = [] } = useQuery({
 //         queryKey: ['module_settings'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/module_settings/module_settings_all`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/module_settings/module_settings_all`);
 //             return await res.json();
 //         }
 //     });
@@ -4408,7 +4408,7 @@ export default EditExpense;
 //         queryKey: ['supplierLastDue', api],
 //         queryFn: async () => {
 //             if (api) {
-//                 const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002${api}`);
+//                 const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/:5002${api}`);
 //                 const data = await res.json();
 //                 return data;
 //             }
@@ -4421,7 +4421,7 @@ export default EditExpense;
 //     const { data: expenseSingle = [] } = useQuery({
 //         queryKey: ['expenseSingle'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_all/${id}`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_all/${id}`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -4494,7 +4494,7 @@ export default EditExpense;
 //     const { data: module_settings = [] } = useQuery({
 //         queryKey: ['module_settings'],
 //         queryFn: async () => {
-//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/module_settings/module_settings_all`);
+//             const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/module_settings/module_settings_all`);
 //             const data = await res.json();
 //             return data;
 //         }
@@ -4669,7 +4669,7 @@ export default EditExpense;
 //                                             className="btn btn-success btn-sm"
 //                                             type="button"
 //                                             onClick={() => {
-//                                                 fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/Admin/expense/expense_update/${id}`, {
+//                                                 fetch(`${process.env.NEXT_PUBLIC_API_URL}/Admin/expense/expense_update/${id}`, {
 //                                                     method: "POST",
 //                                                     headers: {
 //                                                         "Content-Type": "application/json",
