@@ -329,7 +329,7 @@ const TrialBalance = () => {
 
     // const [data, setData] = useState([])
     // useEffect(() => {
-    //     fetch(`http://192.168.0.185:5002/api/account_report`)
+    //     fetch(`https://hr-allowance-new-server.vercel.app/api/account_report`)
     //     .then(res => res.json())
     //     .then(data => setData(data))
     // },[])
@@ -359,7 +359,7 @@ const TrialBalance = () => {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        fetch(`http://192.168.0.185:5002/api/account_report`)
+        fetch(`https://hr-allowance-new-server.vercel.app/api/account_report`)
             .then(res => res.json())
             .then(data => setData(data))
             .catch(error => console.error("Error fetching data:", error));

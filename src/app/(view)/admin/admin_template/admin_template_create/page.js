@@ -816,8 +816,8 @@ const router = useRouter()
 
 		console.log(adminPageListSettings)
 		// ${process.env.NEXT_PUBLIC_API_URL}:5002/admin/create_side_menu
-		// http://192.168.0.185:5002/submit-form
-		// http://192.168.0.185:5002/admin/create_side_menu
+		// https://hr-allowance-new-server.vercel.app/submit-form
+		// https://hr-allowance-new-server.vercel.app/admin/create_side_menu
 		fetch(`${process.env.NEXT_PUBLIC_API_URL}:5002/admin/create_side_menu`, {
 			method: 'POST',
 			headers: {
